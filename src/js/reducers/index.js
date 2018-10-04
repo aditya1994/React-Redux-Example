@@ -1,12 +1,14 @@
+import {ADD_ARTICLE} from "../constants/action-types.js"
+
 const initialState = {
-	articles = []
-}
+	articles: []
+};
 
 const rootReducer = (state = initialState	, action) => {
 	switch (action.type){
 		case ADD_ARTICLE:
 			//state.articles.push(action.payload);
-			return {...state, articles = [...state.articles, action.payload] };
+			return {...state, articles : [...state.articles, action.payload] };
 		default:
 			return state;
 	}
